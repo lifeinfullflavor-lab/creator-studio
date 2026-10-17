@@ -1,0 +1,16 @@
+{
+  "name": "Life In Full Flavor – Creator Studio",
+  "short_name": "Full Flavor",
+  "description": "Your channel, optimization status and 24-hour growth – also when the PC is off.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    { "src": "https://yt3.googleusercontent.com/lSCi7noRIMIzoBbdWtw1v-FIr5IlpypUFcrNgLjxNJ4vW7KRR0VI2Br9n6b8gOCke8VofuFW-w=s192-c-k-c0x00ffffff-no-rj", "sizes": "192x192", "purpose": "any" },
+    { "src": "https://yt3.googleusercontent.com/lSCi7noRIMIzoBbdWtw1v-FIr5IlpypUFcrNgLjxNJ4vW7KRR0VI2Br9n6b8gOCke8VofuFW-w=s512-c-k-c0x00ffffff-no-rj", "sizes": "512x512", "purpose": "any" },
+    { "src": "https://yt3.googleusercontent.com/lSCi7noRIMIzoBbdWtw1v-FIr5IlpypUFcrNgLjxNJ4vW7KRR0VI2Br9n6b8gOCke8VofuFW-w=s512-c-k-c0x00ffffff-no-rj", "sizes": "512x512", "purpose": "maskable" }
+  ]
+}
