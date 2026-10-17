@@ -11,9 +11,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#0f172a">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<!-- the official logo = the channel picture (Google serves it in any size) -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://yt3.googleusercontent.com/lSCi7noRIMIzoBbdWtw1v-FIr5IlpypUFcrNgLjxNJ4vW7KRR0VI2Br9n6b8gOCke8VofuFW-w=s180-c-k-c0x00ffffff-no-rj">
+<link rel="icon" sizes="192x192" href="https://yt3.googleusercontent.com/lSCi7noRIMIzoBbdWtw1v-FIr5IlpypUFcrNgLjxNJ4vW7KRR0VI2Br9n6b8gOCke8VofuFW-w=s192-c-k-c0x00ffffff-no-rj">
+<link rel="icon" sizes="32x32" href="https://yt3.googleusercontent.com/lSCi7noRIMIzoBbdWtw1v-FIr5IlpypUFcrNgLjxNJ4vW7KRR0VI2Br9n6b8gOCke8VofuFW-w=s32-c-k-c0x00ffffff-no-rj">
 <style>
   /* Home-screen launcher for the Creator Studio phone page (17 Oct 2026, owner: "display the official Life In Full Flavor app icon").
      The page itself lives in the owner's Google Apps Script (locked with passphrase + authenticator code); this file only gives it
@@ -21,13 +22,13 @@
   html, body { margin: 0; height: 100%; background: #0f172a; overflow: hidden; }
   #f { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; background: #0f172a; }
   #s { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #0f172a; color: #94a3b8; font: 14px -apple-system, Segoe UI, Roboto, sans-serif; transition: opacity .35s; }
-  #s img { width: 96px; height: 96px; border-radius: 50%; }
+  #s img { width: 96px; height: 96px; border-radius: 22px; }
   #s.off { opacity: 0; pointer-events: none; }
   #s a { color: #7dd3fc; display: none; }
 </style>
 </head>
 <body>
-<div id="s"><img src="icon-192.png" alt=""><span id="m">Opening Creator Studio…</span><a id="o" rel="noopener">Open in the browser instead</a></div>
+<div id="s"><img src="https://yt3.googleusercontent.com/lSCi7noRIMIzoBbdWtw1v-FIr5IlpypUFcrNgLjxNJ4vW7KRR0VI2Br9n6b8gOCke8VofuFW-w=s192-c-k-c0x00ffffff-no-rj" alt=""><span id="m">Opening Creator Studio…</span><a id="o" rel="noopener">Open in the browser instead</a></div>
 <iframe id="f" title="Creator Studio" allow="clipboard-write"></iframe>
 <script>
   // the owner's web app (Integrations → ☁️ Always on in Creator Studio)
