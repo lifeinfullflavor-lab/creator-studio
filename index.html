@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Life In Full Flavor</title>
+<meta name="application-name" content="Life In Full Flavor">
+<meta name="apple-mobile-web-app-title" content="Full Flavor">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<style>
+  /* Home-screen launcher for the Creator Studio phone page (17 Oct 2026, owner: "display the official Life In Full Flavor app icon").
+     The page itself lives in the owner's Google Apps Script (locked with passphrase + authenticator code); this file only gives it
+     the official icon, a full-screen start and a splash screen. */
+  html, body { margin: 0; height: 100%; background: #0f172a; overflow: hidden; }
+  #f { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; background: #0f172a; }
+  #s { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #0f172a; color: #94a3b8; font: 14px -apple-system, Segoe UI, Roboto, sans-serif; transition: opacity .35s; }
+  #s img { width: 96px; height: 96px; border-radius: 50%; }
+  #s.off { opacity: 0; pointer-events: none; }
+  #s a { color: #7dd3fc; display: none; }
+</style>
+</head>
+<body>
+<div id="s"><img src="icon-192.png" alt=""><span id="m">Opening Creator Studio…</span><a id="o" rel="noopener">Open in the browser instead</a></div>
+<iframe id="f" title="Creator Studio" allow="clipboard-write"></iframe>
+<script>
+  // the owner's web app (Integrations → ☁️ Always on in Creator Studio)
+  var APP = 'https://script.google.com/macros/s/AKfycbwX_02TBNX6-cjLFS6DDGeYlmEaq_xX57lp1qAZ06-lPiWMzsMv--5k4hcgFpVE3nNCJw/exec?view=phone';
+  var f = document.getElementById('f'), s = document.getElementById('s'), o = document.getElementById('o');
+  o.href = APP;
+  f.onload = function () { s.className = 'off' };
+  f.src = APP;
+  // if Google cannot be shown inside the launcher (rare: old browser, blocked third-party frames), offer the page itself
+  setTimeout(function () { if (s.className !== 'off') { document.getElementById('m').textContent = 'Still loading…'; o.style.display = 'block' } }, 12000);
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function () {});
+</script>
+</body>
+</html>
